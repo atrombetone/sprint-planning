@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let item of sprints" [routerLink]="['/sprint', item.id]"
+        routerLinkActive="router-link-active">
+        <ngx-avatar value="{{item.id}}"></ngx-avatar> {{item.name}}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
