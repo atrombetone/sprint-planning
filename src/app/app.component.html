@@ -1,4 +1,5 @@
-<mat-sidenav-container class="sidenav-container">
+<app-login *ngIf="!isUserLogged" (signEvent)="efetuarLogin()"></app-login>
+<mat-sidenav-container class="sidenav-container" *ngIf="isUserLogged">
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
@@ -27,7 +28,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>SprintPlanning</span>
+      <span>{{title}}</span>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

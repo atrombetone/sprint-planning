@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-sprintdetail',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SprintdetailComponent implements OnInit {
 
-  constructor() { }
+  addressForm = this.fb.group({
+    sprintName: null,
+    firstName: null,
+    lastName: null,
+    address: null,
+    address2: null,
+    city: null, 
+    state: null
+  });
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }

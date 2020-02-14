@@ -1,9 +1,27 @@
 <mat-card>
   <mat-card-content>
     <mat-list>
-      <mat-list-item *ngFor="let item of sprints" [routerLink]="['/sprint', item.id]"
+      <mat-list-item>
+        <h5>Sprint Atual</h5>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/sprint', 10]" style="cursor: pointer;">
+        <ngx-avatar value="10"></ngx-avatar>&nbsp;&nbsp;&nbsp; Atualizar Ids
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions style="text-align: right;">
+      <button mat-fab color="primary" [routerLink]="['/sprint', 0]" >
+        <i class="material-icons">add</i>
+      </button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let item of sprints" [routerLink]="['/sprint', item.id]" style="cursor: pointer;"
         routerLinkActive="router-link-active">
-        <ngx-avatar value="{{item.id}}"></ngx-avatar> {{item.name}}
+        <ngx-avatar value="{{item.id}}"></ngx-avatar>&nbsp;&nbsp;&nbsp;{{item.name}}
       </mat-list-item>
     </mat-list>
   </mat-card-content>

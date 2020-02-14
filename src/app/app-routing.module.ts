@@ -7,11 +7,11 @@ import { ProjetosComponent } from './pages/projetos/projetos.component';
 import { SprintdetailComponent } from './pages/sprintdetail/sprintdetail.component';
 
 const routes: Routes = [
-  { path: 'projetos', component: ProjetosComponent },
-  { path: 'sprints', component: SprintsComponent },
-  { path: 'times', component: TimesComponent },
-  { path: 'sprint/:id', component: SprintdetailComponent },
-  { path: '**', component: HomeComponent }
+  { path: 'projetos', component: ProjetosComponent, data: {title: 'Projetos'}},
+  { path: 'sprints', component: SprintsComponent, data: {title: 'Sprints'} },
+  { path: 'times', component: TimesComponent, data: {title: 'Times'} },
+  { path: 'sprint/:id', component: SprintdetailComponent, data: {title: 'Sprint detail'} },
+  { path: '**', component: HomeComponent, data: {title: 'Home'} }
 ];
 
 @NgModule({

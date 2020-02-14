@@ -1,3 +1,17 @@
-<p>
-  times works!
-</p>
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item [routerLink]="['/time', 1]" style="cursor: pointer;">
+        <ngx-avatar value="H"></ngx-avatar>&nbsp;&nbsp;&nbsp;Hydra Team
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/time', 2]" style="cursor: pointer;">
+        <ngx-avatar value="M"></ngx-avatar>&nbsp;&nbsp;&nbsp;Minotauro Team
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions style="text-align: right;">
+      <button mat-fab color="primary" [routerLink]="['/time', 0]" >
+        <i class="material-icons">add</i>
+      </button>
+  </mat-card-actions>
+</mat-card>

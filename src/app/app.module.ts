@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatRadioModule } from '@angular/material';
 import { TimesComponent } from './pages/times/times.component';
 import { ProjetosComponent } from './pages/projetos/projetos.component';
 import { SprintsComponent } from './pages/sprints/sprints.component';
@@ -14,6 +14,9 @@ import { AvatarModule } from 'ngx-avatar';
 import { HttpClientModule } from '@angular/common/http';
 import { SprintdetailComponent } from './pages/sprintdetail/sprintdetail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { TesteComponent } from './teste/teste.component';
+import { StoryComponent } from './components/story/story.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProjetosComponent,
     SprintsComponent,
     HomeComponent,
-    SprintdetailComponent
+    SprintdetailComponent,
+    LoginComponent,
+    TesteComponent,
+    StoryComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    AvatarModule
+    AvatarModule,
+    MatSelectModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
